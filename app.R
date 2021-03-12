@@ -92,6 +92,9 @@ ui <-
 
 server <- function(input, output, session) {
   time_data <- reactive({
+
+    Sys.sleep(1)
+
     switch(input$time,
       "Past 12 Months" = last_year,
       "Last 7 Days" = last_week
