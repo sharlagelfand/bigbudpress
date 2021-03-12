@@ -33,7 +33,7 @@ ui <-
         "Hello!",
         div(
           style = "position: fixed; left: 0; top: 0; z-index: -1;",
-          img(src = "banner.png", style = "width: 100vw;")
+          img(src = "banner.png", style = "min-width: 100vw; min-height: 100vh;")
         ),
         column(
           width = 12,
@@ -93,7 +93,7 @@ ui <-
 server <- function(input, output, session) {
   time_data <- reactive({
 
-    Sys.sleep(1)
+    Sys.sleep(1.5)
 
     switch(input$time,
       "Past 12 Months" = last_year,
