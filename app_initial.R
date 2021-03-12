@@ -1,17 +1,16 @@
 library(shiny)
 library(ggplot2)
-library(rnaturalearth)
 library(dplyr)
 
 last_week <- readRDS("data/last_week.rds")
 last_year <- readRDS("data/last_year.rds")
-world <- ne_countries(scale = "medium", returnclass = "sf")
+world <- readRDS("data/world.rds")
 
 ui <- navbarPage(
   title = "BIG BUD PRESS",
   tabPanel(
     "Google Trends",
-    p("This page captures popularity of the search term", span("Big Bud Press"), "from Google Trends. Numbers are all relative to the highest data point for a given region or time - 100 is peak popularity, 50 means half as popular. Data was obtained via the R package", a("gtrendsR", href = "https://cran.r-project.org/web/packages/gtrendsR/index.html", target = "_blank"), "on March 11, 2021, so only goes up til then!"),
+    p("This page captures popularity of the search term \"Big Bud Press \" from Google Trends. Numbers are all relative to the highest data point for a given region or time - 100 is peak popularity, 50 means half as popular. Data was obtained via the R package", a("gtrendsR", href = "https://cran.r-project.org/web/packages/gtrendsR/index.html", target = "_blank"), "on March 11, 2021, so only goes up til then!"),
     sidebarLayout(
       sidebarPanel(
         selectInput("time", label = "Select a time period", choices = c("Past 12 Months", "Last 7 Days"), selected = "Past 12 Months")
