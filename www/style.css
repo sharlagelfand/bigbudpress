@@ -1,0 +1,124 @@
+/* Import font for use */
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap');
+
+:root {
+  /* Fonts */
+  --text-font-family: "Corben";
+  --text-font-base: serif;
+  --base-font-size: 18px;
+  --base-weight: 400;
+  --heavy-weight: 700;
+
+  /* Colours */
+  --text-color: #2E3438;
+  --background-color: #FFFFFF;
+  --primary-color: #00807A;
+  --link-color: #00CCC3;
+  --white: #FFFFFF;
+}
+
+/* Set everything to Corben font, with serif as a fallback, and set the colour and size */
+* {
+  font-family: var(--text-font-family), var(--text-font-base);
+  font-size: var(--base-font-size);
+  color: var(--text-color);
+}
+
+/* Heavier headers */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--heavy-weight);
+}
+
+/* Link colour and hover */
+a {
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--link-color);
+}
+
+/* Limit page content to 1180px */
+.container-fluid {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----- Navbar ------ */
+
+/* Make nav bar links uppercase and heavier weight */
+.navbar-default .navbar-nav > li > a {
+  text-transform: uppercase;
+  font-weight: var(--heavy-weight);
+  color: var(--text-color);
+}
+
+/* Change to primary colour on hover, make active tab navbar link primary colour, and add no additional background to all */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .open > a:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+/* Account for logo size */
+.navbar-brand {
+  height: 130px; /* Image is 100px + 15px padding top and bottom */
+}
+
+.navbar-default .navbar-nav > li > a {
+  line-height: 100px;
+  bottom: 0px;
+  margin-left: 30px;
+}
+
+/* Remove background from navbar, set bottom border and mock header */
+.navbar-default {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--primary-color);
+  border-top: 30px solid var(--primary-color);
+}
+
+/* Push navbar links to the right */
+.navbar-nav {
+  float: right;
+}
+
+/* ----- Footer ----- */
+
+/* Set colour and height, push to bottom, and take up full width (not just contained to the container) */
+.bb-footer {
+  background-color: var(--primary-color);
+  min-height: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Style footer fonts */
+.bb-footer p {
+  color: var(--white);
+  text-align: center;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.bb-footer a {
+  color: var(--white);
+}
+
+.bb-footer a:hover {
+  color: var(--primary-color);
+}
+
+/* Add a little padding to the bottom of the page so the footer doesn't cover it */
+body {
+  margin-bottom: 50px ;
+}
+
+/* Make the well panels colourful and chunk, remove that background */
+.well {
+  border-radius: 5px;
+  border: 3px solid var(--primary-color);
+  background-color: transparent;
+}
