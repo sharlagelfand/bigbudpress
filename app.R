@@ -16,7 +16,7 @@ world <- readRDS("data/world.rds")
 
 st_crs(world) <- 4326 # Re-set CRS because Shinyapps uses some other version of GDAL (??) or something idk
 
-logo <- a(href = "/", img(src = "logo.webp", alt = "BIG BUD PRESS", height = "100px"))
+logo <- a(href = "", img(src = "logo.webp", alt = "BIG BUD PRESS", height = "100px"))
 footer <- div(class = "bb-footer", p("Made with love and #rstats by", a("Sharla Gelfand", href = "https://sharla.party", target = "_blank")))
 
 ui <-
@@ -40,7 +40,7 @@ ui <-
           wellPanel(
             style = "border: none; background-color: rgba(255, 255, 255, 0.5); box-shadow: none; --webkit-box-shadow: none;",
             h1("Hello!"),
-            p("This is an exploration of branding a web app, inspired by (ripping off?) the wonderful", a("Big Bud Press", href = "https://bigbudpress.com", target = "_blank"), ", a Los Angeles based clothing brand specializing in unisex, everyday, and ethical goods. It's just for fun! You can read more about the making of in", a("this blog post", href = "", target = "_blank"), "and see", a("the code here.", href = "", target = "_blank"))
+            p("This is an exploration of branding a web app, inspired by (ripping off?) the wonderful", a("Big Bud Press", href = "https://bigbudpress.com", target = "_blank"), ", a Los Angeles based clothing brand specializing in unisex, everyday, and ethical goods. It's just for fun! You can read more about the making of in", a("this blog post", href = "https://sharla.party/post/2021-03-12-big-bud-press/", target = "_blank"), "and see", a("the code here.", href = "https://github.com/sharlagelfand/bigbudpress", target = "_blank"))
           )
         )
       ),
