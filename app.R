@@ -32,8 +32,8 @@ ui <-
       tabPanel(
         "Hello!",
         div(
-          style = "position: fixed; left: 0; top: 0; z-index: -1; background-size:cover;",
-          img(src = "banner.png")
+          style = "position: fixed; left: 0; top: 0; z-index: -1;",
+          img(src = "banner.png", style = "width: 100vw;")
         ),
         column(
           width = 12,
